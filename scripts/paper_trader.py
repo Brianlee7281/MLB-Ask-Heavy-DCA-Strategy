@@ -334,6 +334,9 @@ class PaperGameMonitor:
 
     def _process_book(self, book: OrderBook) -> None:
         """Compute depth_ratio and simulate DCA entry if ask_heavy."""
+        if self._ctx.status in _PREGAME_STATES or self._ctx.is_final:
+            return
+
         mid = book.mid
         depth_ratio = book.depth_ratio
         self._last_mid = mid
