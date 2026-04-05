@@ -27,3 +27,5 @@ results/
 .pytest_cache/
 htmlcov/
 .coverage
+
+.pem
