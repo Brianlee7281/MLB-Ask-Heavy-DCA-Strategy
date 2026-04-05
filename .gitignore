@@ -11,7 +11,8 @@ build/
 .eggs/
 
 # Data
-
+data/
+results/
 
 # IDE
 .vscode/
